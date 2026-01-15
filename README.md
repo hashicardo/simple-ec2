@@ -2,6 +2,8 @@
 
 Deploys an EC2 instance with a responsive web app that displays VM metadata (hostname, OS, instance type, and public IP) in a customizable identity card.
 
+>NOTE: after successfully running `terraform apply` it should take a few seconds for the web server to be up and running
+
 ## Usage
 
 ```hcl
