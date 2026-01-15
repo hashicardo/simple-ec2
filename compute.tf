@@ -46,7 +46,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web" {
   ami                         = data.aws_ami.ubuntu.id
-  instance_type               = "t4g.small"
+  instance_type               = var.vm_type
   subnet_id                   = aws_subnet.public.id
   associate_public_ip_address = true
   user_data                   = data.cloudinit_config.content.rendered

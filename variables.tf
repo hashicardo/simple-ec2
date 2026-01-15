@@ -25,3 +25,9 @@ variable "default_tags" {
   }
 }
 
+variable "vm_type" {
+  type        = string
+  default     = "t4g.small"
+  description = "EC2 machine type"
+}
+

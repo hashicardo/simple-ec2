@@ -1,4 +1,4 @@
-output "hostname" {
+output "url" {
   value = "http://${aws_eip.vm_ip.public_ip}"
 }
 
