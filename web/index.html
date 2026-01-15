@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VM Identity Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.hashicorp.com/img/favicon-production-white.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">${page_title}</h1>
+        
+        <div class="card">
+            <div class="card-header">
+                <img src="${logo_url}" alt="Logo" class="logo" onerror="this.style.display='none'">
+            </div>
+            
+            <div class="card-body">
+                <div class="info-row">
+                    <span class="label">Hostname</span>
+                    <span class="value" id="hostname">{hostname}</span>
+                </div>
+                
+                <div class="info-row">
+                    <span class="label">Operating System</span>
+                    <span class="value" id="os">{os}</span>
+                </div>
+                
+                <div class="info-row">
+                    <span class="label">VM Specs</span>
+                    <div class="specs">
+                        <span class="value">Memory: {memory}</span>
+                        <span class="value">vCPUs: {vcpus}</span>
+                        <span class="value">Architecture: {arch}</span>
+                    </div>
+                </div>
+                
+                <div class="info-row">
+                    <span class="label">Public IP</span>
+                    <span class="value" id="public-ip">{public_ip}</span>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            Made with <span class="heart">♥</span> by HashiCorp SEs
+        </footer>
+    </div>
+</body>
+</html>

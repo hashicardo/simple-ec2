@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    justify-content: center;
+    gap: 20px;
+}
+
+.page-title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-header {
+    background: linear-gradient(135deg, #5568c1db 0%, #8e5ec6c7 100%);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+}
+
+.logo {
+    max-width: 150px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.value {
+    color: #6b7280;
+    font-size: 0.95rem;
+    text-align: right;
+    word-break: break-all;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.heart {
+    color: #a92e2e;
+    font-size: 1.1rem;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.specs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 20px;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 0;
+    }
+    
+    .value {
+        text-align: left;
+        word-break: break-word;
+    }
+}
