@@ -51,7 +51,7 @@ resource "aws_instance" "web" {
   associate_public_ip_address = true
   user_data                   = data.cloudinit_config.content.rendered
   key_name                    = aws_key_pair.simple_kp.key_name
-  security_groups             = [aws_security_group.allow_web_traffic.id]
+  vpc_security_group_ids      = [aws_security_group.allow_web_traffic.id]
 
   tags = {
     Name = "${var.prefix}-simplec2"
